@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splashbackground">
+
+        <TextView
+            android:text="Welcome to BathroomBrowser!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="100dp"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:text="Map View"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/MapButton"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@drawable/cast_expanded_controller_actionbar_bg_gradient_light" />
+
+        <Button
+            android:text="List View"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ListButton"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@drawable/cast_expanded_controller_actionbar_bg_gradient_light" />
+
+        <Button
+            android:text="Settings"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/SettingsButton"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:backgroundTint="@drawable/cast_expanded_controller_actionbar_bg_gradient_light" />
+    </LinearLayout>
+</LinearLayout>
