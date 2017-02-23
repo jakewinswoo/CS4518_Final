@@ -1,7 +1,10 @@
 package com.example.jake.bathroombrowser;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -42,5 +45,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(42.2626, -71.8023);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+    }
+
+    public void listButtonOnClick(View v){
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(),ListActivity.class));
+    }
+
+    public void settingsButtonOnClick(View v){
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
     }
 }

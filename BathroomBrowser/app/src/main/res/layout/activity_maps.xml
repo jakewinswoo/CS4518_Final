@@ -12,7 +12,7 @@
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         tools:context="com.example.jake.bathroombrowser.MapsActivity"
-        android:layout_height="450dp" />
+        android:layout_height="500dp" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/ListButton"
             android:layout_weight="1"
-            android:backgroundTint="@drawable/cast_expanded_controller_actionbar_bg_gradient_light" />
+            android:backgroundTint="@android:color/white"
+            android:onClick="listButtonOnClick" />
 
         <Button
             android:text="Settings"
@@ -34,6 +35,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/SettingsButton"
             android:layout_weight="1"
-            android:backgroundTint="@drawable/cast_expanded_controller_actionbar_bg_gradient_light" />
+            android:backgroundTint="@android:color/white"
+            android:onClick="settingsButtonOnClick" />
     </LinearLayout>
 </LinearLayout>
