@@ -21,19 +21,52 @@
         android:layout_marginTop="25dp"
         android:layout_marginBottom="25dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:layout_width="match_parent"
             android:layout_height="100dp"
-            app:srcCompat="@android:drawable/ic_menu_report_image"
-            android:id="@+id/imageView"
-            android:layout_weight="1" />
+            android:id="@+id/h_scrollView">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            app:srcCompat="@android:drawable/ic_menu_report_image"
-            android:id="@+id/imageView2"
-            android:layout_weight="1" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@android:drawable/ic_menu_report_image"
+                    android:id="@+id/imageView4"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@android:drawable/ic_menu_report_image"
+                    android:id="@+id/imageView5"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@android:drawable/ic_menu_report_image"
+                    android:id="@+id/imageView3"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@android:drawable/ic_menu_report_image"
+                    android:id="@+id/imageView2"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:srcCompat="@android:drawable/ic_menu_report_image"
+                    android:id="@+id/imageView"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </HorizontalScrollView>
     </LinearLayout>
 
     <TextView
@@ -72,12 +105,12 @@
         android:layout_height="wrap_content"
         android:id="@+id/ratingBar"
         android:numStars="5"
-        android:layout_width="250dp"
         android:rating="2"
         android:stepSize="1"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:layout_marginBottom="25dp" />
+        android:layout_marginBottom="25dp"
+        android:layout_width="240dp" />
 
     <LinearLayout
         android:orientation="horizontal"
