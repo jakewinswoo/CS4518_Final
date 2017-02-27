@@ -30,8 +30,7 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps">
-            </activity>
+            android:label="@string/title_activity_maps"></activity>
         <activity
             android:name=".SplashActivity"
             android:label="Splash">
@@ -43,12 +42,11 @@
         </activity>
         <activity
             android:name=".ListActivity"
-            android:label="List">
-        </activity>
+            android:label="List"></activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="Settings">
-        </activity>
+            android:label="Settings"></activity>
+        <activity android:name=".BathroomActivity"></activity>
     </application>
 
 </manifest>
