@@ -33,6 +33,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
@@ -118,7 +119,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             };
             locationManager.requestLocationUpdates(provider, 20000, 0, locationListener);
         }
-
     }
 
     public void onLocationChanged(Location location) {
@@ -146,6 +146,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     public void settingsButtonOnClick(View v) {
         Button button = (Button) v;
         startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+    }
+
+    public void drawBathrooms(GoogleMap googleMap, List<Bathroom_Database_Entry> bathrooms){
+        mMap = googleMap;
+
+        int b_size = bathrooms.size();
+
+        for(int i=0;i<b_size;i++){
+            double latitude = bathrooms.get(i).getGPSLat();
+            double longitude = bathrooms.get(i).getGPSLong();
+            LatLng latLng = new LatLng(latitude, longitude);
+            mMap.addMarker(new MarkerOptions().position(latLng).title(bathrooms.get(i).getName()));
+        }
     }
 
 }
