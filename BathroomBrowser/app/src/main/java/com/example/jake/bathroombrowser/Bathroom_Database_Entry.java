@@ -19,6 +19,7 @@ public class Bathroom_Database_Entry {
     private int openingHour; // 0 through 23
     private int closingHour; // 0 through 23
     private int femHygiene; // 0 = N, 1 = Y
+    private String otherData; // just a string of all extra data
 
 
     public Bathroom_Database_Entry(){
@@ -37,7 +38,8 @@ public class Bathroom_Database_Entry {
                                    int purchaseRequired,
                                    int openingHour,
                                    int closingHour,
-                                   int femHygiene)
+                                   int femHygiene,
+                                   String otherData)
     {
         this.id = id;
         this.name = name;
@@ -53,6 +55,7 @@ public class Bathroom_Database_Entry {
         this.openingHour = openingHour;
         this.closingHour = closingHour;
         this.femHygiene = femHygiene;
+        this.otherData = otherData;
     }
     public void setId (int id){
         this.id = id;
@@ -97,6 +100,9 @@ public class Bathroom_Database_Entry {
         this.femHygiene = femHygiene;
     }
 
+    public void setOtherData(String otherData) {
+        this.otherData = otherData;
+    }
 
     public int getId() {
         return id;
@@ -152,5 +158,9 @@ public class Bathroom_Database_Entry {
 
     public int getFemHygiene() {
         return femHygiene;
+    }
+
+    public String getOtherData() {
+        return otherData;
     }
 }
