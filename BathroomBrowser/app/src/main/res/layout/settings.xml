@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/splashbackground">
 
     <TextView
         android:text="Settings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView3"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10dp" />
 
     <TextView
         android:text="Gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp" />
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -25,58 +31,82 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton2"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="15dp" />
 
         <RadioButton
             android:text="Neutral"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton4"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="15dp" />
 
         <RadioButton
             android:text="Female"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/radioButton3"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="15dp" />
     </RadioGroup>
 
     <TextView
         android:text="Options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView5" />
+        android:id="@+id/textView5"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp" />
 
     <CheckBox
         android:text="Handicap Accessible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox" />
+        android:id="@+id/checkBox"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp" />
 
     <CheckBox
         android:text="Changing Station"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox2" />
+        android:id="@+id/checkBox2"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp" />
 
     <CheckBox
         android:text="Hygiene Products Available"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox3" />
+        android:id="@+id/checkBox3"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp" />
 
     <CheckBox
         android:text="Card Access Required"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox4" />
+        android:id="@+id/checkBox4"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="15dp" />
+
+    <CheckBox
+        android:text="Open Now"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox5"
+        android:layout_marginLeft="15dp"
+        android:textColor="@android:color/white" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="120dp">
 
         <Button
             android:text="Map View"
