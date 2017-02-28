@@ -37,6 +37,7 @@ public class DBHandler extends SQLiteOpenHelper{
     private static final String KEY_OPENING = "openingHour";
     private static final String KEY_CLOSING = "closingHour";
     private static final String KEY_HYGIENE = "femHygiene";
+    private static final String KEY_OTHER = "otherData";
 
     public DBHandler(Context context){
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -58,7 +59,8 @@ public class DBHandler extends SQLiteOpenHelper{
                 KEY_PURCHASE + "INTEGER," +
                 KEY_OPENING + "INTEGER," +
                 KEY_CLOSING + "INTEGER," +
-                KEY_HYGIENE + "INTEGER" + ")";
+                KEY_HYGIENE + "INTEGER" +
+                KEY_OTHER + "TEXT" + ")";
         db.execSQL(CREATE_BATHROOMS_TABLE);
     }
 
@@ -86,6 +88,7 @@ public class DBHandler extends SQLiteOpenHelper{
         values.put(KEY_OPENING, bathroom.getOpeningHour());
         values.put(KEY_CLOSING, bathroom.getClosingHour());
         values.put(KEY_HYGIENE, bathroom.getFemHygiene());
+        values.put(KEY_OTHER, bathroom.getOtherData());
 
         db.insert(TABLE_BATHROOMS, null, values);
         db.close();
@@ -95,27 +98,28 @@ public class DBHandler extends SQLiteOpenHelper{
     public Bathroom_Database_Entry getBathroom(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_BATHROOMS, new String[] {KEY_ID, KEY_NAME, KEY_LONG, KEY_LAT,
-                        KEY_GENDER, KEY_STALLS, KEY_URINALS, KEY_HANDICAP, KEY_ENTRANCE, KEY_CHANGING,
-                        KEY_PURCHASE, KEY_OPENING, KEY_CLOSING, KEY_HYGIENE}, KEY_ID + "=?",
+                KEY_GENDER, KEY_STALLS, KEY_URINALS, KEY_HANDICAP, KEY_ENTRANCE, KEY_CHANGING,
+                KEY_PURCHASE, KEY_OPENING, KEY_CLOSING, KEY_HYGIENE, KEY_OTHER}, KEY_ID + "=?",
                 new String[] {String.valueOf(id)}, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
         Bathroom_Database_Entry contact = new Bathroom_Database_Entry(
-                Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1),
-                Float.parseFloat(cursor.getString(2)),
-                Float.parseFloat(cursor.getString(3)),
-                cursor.getString(4),
-                Integer.parseInt(cursor.getString(5)),
-                Integer.parseInt(cursor.getString(6)),
-                Integer.parseInt(cursor.getString(7)),
-                Integer.parseInt(cursor.getString(8)),
-                Integer.parseInt(cursor.getString(9)),
-                Integer.parseInt(cursor.getString(10)),
-                Integer.parseInt(cursor.getString(11)),
-                Integer.parseInt(cursor.getString(12)),
-                Integer.parseInt(cursor.getString(13)));
+                        Integer.parseInt(cursor.getString(0)),
+                        cursor.getString(1),
+                        Float.parseFloat(cursor.getString(2)),
+                        Float.parseFloat(cursor.getString(3)),
+                        cursor.getString(4),
+                        Integer.parseInt(cursor.getString(5)),
+                        Integer.parseInt(cursor.getString(6)),
+                        Integer.parseInt(cursor.getString(7)),
+                        Integer.parseInt(cursor.getString(8)),
+                        Integer.parseInt(cursor.getString(9)),
+                        Integer.parseInt(cursor.getString(10)),
+                        Integer.parseInt(cursor.getString(11)),
+                        Integer.parseInt(cursor.getString(12)),
+                        Integer.parseInt(cursor.getString(13)),
+                        cursor.getString(14));
         //return the newly created bathroom_database_entry
         return contact;
     }
@@ -145,6 +149,7 @@ public class DBHandler extends SQLiteOpenHelper{
                 bathroom.setOpeningHour(Integer.parseInt(cursor.getString(11)));
                 bathroom.setClosingHour(Integer.parseInt(cursor.getString(12)));
                 bathroom.setFemHygiene(Integer.parseInt(cursor.getString(13)));
+                bathroom.setOtherData(cursor.getString(14));
                 //Adding contact to list
                 bathroomList.add(bathroom);
             } while (cursor.moveToNext());
