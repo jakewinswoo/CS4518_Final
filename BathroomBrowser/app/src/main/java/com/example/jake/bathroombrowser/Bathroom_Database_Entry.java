@@ -163,8 +163,4 @@ public class Bathroom_Database_Entry {
     public String getOtherData() {
         return otherData;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master

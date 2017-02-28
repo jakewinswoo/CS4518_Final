@@ -98,19 +98,13 @@ public class DBHandler extends SQLiteOpenHelper{
     public Bathroom_Database_Entry getBathroom(int id){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(TABLE_BATHROOMS, new String[] {KEY_ID, KEY_NAME, KEY_LONG, KEY_LAT,
-<<<<<<< HEAD
                         KEY_GENDER, KEY_STALLS, KEY_URINALS, KEY_HANDICAP, KEY_ENTRANCE, KEY_CHANGING,
                         KEY_PURCHASE, KEY_OPENING, KEY_CLOSING, KEY_HYGIENE, KEY_OTHER}, KEY_ID + "=?",
-=======
-                KEY_GENDER, KEY_STALLS, KEY_URINALS, KEY_HANDICAP, KEY_ENTRANCE, KEY_CHANGING,
-                KEY_PURCHASE, KEY_OPENING, KEY_CLOSING, KEY_HYGIENE, KEY_OTHER}, KEY_ID + "=?",
->>>>>>> origin/master
                 new String[] {String.valueOf(id)}, null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
         }
         Bathroom_Database_Entry contact = new Bathroom_Database_Entry(
-<<<<<<< HEAD
                 Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),
                 Float.parseFloat(cursor.getString(2)),
@@ -126,23 +120,6 @@ public class DBHandler extends SQLiteOpenHelper{
                 Integer.parseInt(cursor.getString(12)),
                 Integer.parseInt(cursor.getString(13)),
                 cursor.getString(14));
-=======
-                        Integer.parseInt(cursor.getString(0)),
-                        cursor.getString(1),
-                        Float.parseFloat(cursor.getString(2)),
-                        Float.parseFloat(cursor.getString(3)),
-                        cursor.getString(4),
-                        Integer.parseInt(cursor.getString(5)),
-                        Integer.parseInt(cursor.getString(6)),
-                        Integer.parseInt(cursor.getString(7)),
-                        Integer.parseInt(cursor.getString(8)),
-                        Integer.parseInt(cursor.getString(9)),
-                        Integer.parseInt(cursor.getString(10)),
-                        Integer.parseInt(cursor.getString(11)),
-                        Integer.parseInt(cursor.getString(12)),
-                        Integer.parseInt(cursor.getString(13)),
-                        cursor.getString(14));
->>>>>>> origin/master
         //return the newly created bathroom_database_entry
         return contact;
     }

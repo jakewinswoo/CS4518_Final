@@ -34,13 +34,9 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,
-        GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap;
-
-    private GoogleApiClient client;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,18 +46,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
-    }
-
-    @Override
-    public void onConnected(Bundle connectionHint) {
-
-    }
-
-    @Override
-    public void onConnectionSuspended(int i) {
-
     }
 
     @Override
@@ -137,24 +121,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    public void listButtonOnClick(View v) {
-        Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), ListActivity.class));
-    }
-
-    public void settingsButtonOnClick(View v) {
-        Button button = (Button) v;
-        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
-    }
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-
-    }
-
-    @Override
     public void onLocationChanged(Location location) {
-
         // Getting latitude of the current location
         double latitude = location.getLatitude();
 
@@ -169,42 +136,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         // Zoom in the Google Map
         mMap.animateCamera(CameraUpdateFactory.zoomTo(18));
-
     }
 
-    /**
-     * ATTENTION: This was auto-generated to implement the App Indexing API.
-     * See https://g.co/AppIndexing/AndroidStudio for more information.
-     */
-    public Action getIndexApiAction() {
-        Thing object = new Thing.Builder()
-                .setName("Maps Page") // TODO: Define a title for the content shown.
-                // TODO: Make sure this auto-generated URL is correct.
-                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
-                .build();
-        return new Action.Builder(Action.TYPE_VIEW)
-                .setObject(object)
-                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
-                .build();
+    public void listButtonOnClick(View v) {
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(), ListActivity.class));
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        client.connect();
-        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    public void settingsButtonOnClick(View v) {
+        Button button = (Button) v;
+        startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
-        AppIndex.AppIndexApi.end(client, getIndexApiAction());
-        client.disconnect();
-    }
 }
