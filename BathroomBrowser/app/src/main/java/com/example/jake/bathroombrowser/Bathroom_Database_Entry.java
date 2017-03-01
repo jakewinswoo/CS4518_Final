@@ -7,8 +7,8 @@ package com.example.jake.bathroombrowser;
 public class Bathroom_Database_Entry {
     private int id;
     private String name; //This is the Location
-    private float GPSLong; // This is the X coord
-    private float GPSLat; // This is the Y coord
+    private double GPSLong; // This is the X coord
+    private double GPSLat; // This is the Y coord
     private String gender; // Gender of bathroom
     private int numStalls; //Number of stalls
     private int numUrinals; //Number of urinals, this will only be > 0 in Male bathrooms
@@ -27,8 +27,8 @@ public class Bathroom_Database_Entry {
     }
     public Bathroom_Database_Entry(int id,
                                    String name,
-                                   float GPSLong,
-                                   float GPSLat,
+                                   double GPSLong,
+                                   double GPSLat,
                                    String gender,
                                    int numStalls,
                                    int numUrinals,
@@ -63,10 +63,10 @@ public class Bathroom_Database_Entry {
     public void setName (String name){
         this.name = name;
     }
-    public void setGPSLong (float gpsLong){
+    public void setGPSLong (double gpsLong){
         this.GPSLong = gpsLong;
     }
-    public void setGPSLat (float gpsLat){
+    public void setGPSLat (double gpsLat){
         this.GPSLat = GPSLat;
     }
     public void setGender (String gender){
@@ -112,11 +112,11 @@ public class Bathroom_Database_Entry {
         return name;
     }
 
-    public float getGPSLong() {
+    public double getGPSLong() {
         return GPSLong;
     }
 
-    public float getGPSLat() {
+    public double getGPSLat() {
         return GPSLat;
     }
 

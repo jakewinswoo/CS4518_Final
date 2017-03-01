@@ -9,8 +9,14 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
 
 public class ListActivity extends AppCompatActivity {
+
+    List<Bathroom_Database_Entry> list = SplashActivity.list;
+
+    Bathroom_List_Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +26,13 @@ public class ListActivity extends AppCompatActivity {
 
         ListView listview = (ListView) findViewById(R.id.bathroom_list);
 
-        //POPULATE WITH LIST ITEMS FROM DATABASE
-        // maybe look in CriminalIntent to see how they populate a list with fragments
-        /**
-        Array[] dataArray;
+        //create list of bathrooms and set list = to it
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.bathroom_list_fragment,"description",dataArray);
+        //list = database.get10NearestBathrooms;
+
+        adapter = new Bathroom_List_Adapter(this, list);
+
         listview.setAdapter(adapter);
-         */
     }
 
     public void mapButtonOnClick(View v){

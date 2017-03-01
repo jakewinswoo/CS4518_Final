@@ -6,7 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class SplashActivity extends AppCompatActivity {
+
+    static public List<Bathroom_Database_Entry> list = Arrays.asList(new Bathroom_Database_Entry(0, "Test",-71.808331,42.274752,"Male",0,0,0,1,0,0,5,23,0,""),new Bathroom_Database_Entry(0, "Test2",-71.808380,42.274790,"Male",0,0,0,1,0,0,5,23,0,""));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

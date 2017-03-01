@@ -38,6 +38,8 @@ import java.util.List;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap;
+    static public Location phone_location = null;
+    List<Bathroom_Database_Entry> list = SplashActivity.list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,9 +56,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in worcester and move the camera
-        LatLng sydney = new LatLng(42.274752, -71.808331);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("You are here."));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        //LatLng sydney = new LatLng(42.274752, -71.808331);
+        //mMap.addMarker(new MarkerOptions().position(sydney).title("You are here."));
+        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
         int status = GooglePlayServicesUtil.isGooglePlayServicesAvailable(getBaseContext());
 
@@ -91,6 +93,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             // Getting Current Location
             Location location = locationManager.getLastKnownLocation(provider);
+            phone_location = location;
+            //for testing with emulator
+            //phone_location.setLatitude(42.274752);
+            //phone_location.setLongitude(-71.808331);
 
             if (location != null) {
                 onLocationChanged(location);
@@ -112,6 +118,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                     // Zoom in the Google Map
                     mMap.animateCamera(CameraUpdateFactory.zoomTo(18));
+                    drawBathrooms(mMap,list);
+
                 }
                 public void onStatusChanged (String provider, int status, Bundle extras){}
                 public void onProviderEnabled(String provider) {}
@@ -122,6 +130,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void onLocationChanged(Location location) {
+        drawBathrooms(mMap,list);
+
         // Getting latitude of the current location
         double latitude = location.getLatitude();
 
