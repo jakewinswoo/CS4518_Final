@@ -20,7 +20,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/MapButton"
             android:layout_weight="1"
-            android:onClick="mapButtonOnClick" />
+            android:onClick="mapButtonOnClick"
+            android:backgroundTint="@android:color/white" />
 
         <Button
             android:text="Settings"
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/SettingsButton"
             android:layout_weight="1"
-            android:onClick="settingsButtonOnClick" />
+            android:onClick="settingsButtonOnClick"
+            android:backgroundTint="@android:color/white" />
     </LinearLayout>
 </LinearLayout>

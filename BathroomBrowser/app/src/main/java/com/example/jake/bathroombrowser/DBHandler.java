@@ -45,29 +45,29 @@ public class DBHandler extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CREATE_BATHROOMS_TABLE = "CREATE TABLE" + TABLE_BATHROOMS + "(" +
-                KEY_ID + "INTEGER PRIMARY KEY," +
-                KEY_NAME + "TEXT," +
-                KEY_LONG + "REAL," +
-                KEY_LAT + "REAL," +
-                KEY_GENDER + "TEXT," +
-                KEY_STALLS + "INTEGER," +
-                KEY_URINALS + "INTEGER," +
-                KEY_HANDICAP + "INTEGER," +
-                KEY_ENTRANCE + "INTEGER," +
-                KEY_CHANGING + "INTEGER," +
-                KEY_PURCHASE + "INTEGER," +
-                KEY_OPENING + "INTEGER," +
-                KEY_CLOSING + "INTEGER," +
-                KEY_HYGIENE + "INTEGER" +
-                KEY_OTHER + "TEXT" + ")";
+        String CREATE_BATHROOMS_TABLE = "CREATE TABLE " + TABLE_BATHROOMS + "(" +
+                KEY_ID + " INTEGER PRIMARY KEY, " +
+                KEY_NAME + " TEXT, " +
+                KEY_LONG + " REAL, " +
+                KEY_LAT + " REAL, " +
+                KEY_GENDER + " TEXT, " +
+                KEY_STALLS + " INTEGER, " +
+                KEY_URINALS + " INTEGER, " +
+                KEY_HANDICAP + " INTEGER, " +
+                KEY_ENTRANCE + " INTEGER, " +
+                KEY_CHANGING + " INTEGER, " +
+                KEY_PURCHASE + " INTEGER, " +
+                KEY_OPENING + " INTEGER, " +
+                KEY_CLOSING + " INTEGER, " +
+                KEY_HYGIENE + " INTEGER, " +
+                KEY_OTHER + " TEXT" + ")";
         db.execSQL(CREATE_BATHROOMS_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         //DROP OLDER TABLE IF EXISTED
-        db.execSQL("DROP TABLE IF EXISTS" + TABLE_BATHROOMS);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BATHROOMS);
         //CREATING TABLES AGAIN
         onCreate(db);
     }
@@ -107,8 +107,8 @@ public class DBHandler extends SQLiteOpenHelper{
         Bathroom_Database_Entry contact = new Bathroom_Database_Entry(
                 Integer.parseInt(cursor.getString(0)),
                 cursor.getString(1),
-                Float.parseFloat(cursor.getString(2)),
-                Float.parseFloat(cursor.getString(3)),
+                Double.parseDouble(cursor.getString(2)),
+                Double.parseDouble(cursor.getString(3)),
                 cursor.getString(4),
                 Integer.parseInt(cursor.getString(5)),
                 Integer.parseInt(cursor.getString(6)),
@@ -137,8 +137,8 @@ public class DBHandler extends SQLiteOpenHelper{
                 Bathroom_Database_Entry bathroom = new Bathroom_Database_Entry();
                 bathroom.setId(Integer.parseInt(cursor.getString(0)));
                 bathroom.setName(cursor.getString(1));
-                bathroom.setGPSLong(Float.parseFloat(cursor.getString(2)));
-                bathroom.setGPSLat(Float.parseFloat(cursor.getString(3)));
+                bathroom.setGPSLong(Double.parseDouble(cursor.getString(2)));
+                bathroom.setGPSLat(Double.parseDouble(cursor.getString(3)));
                 bathroom.setGender(cursor.getString(4));
                 bathroom.setNumStalls(Integer.parseInt(cursor.getString(5)));
                 bathroom.setNumUrinals(Integer.parseInt(cursor.getString(6)));

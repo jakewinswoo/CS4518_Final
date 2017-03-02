@@ -6,131 +6,148 @@
     android:weightSum="1"
     android:background="@drawable/splashbackground">
 
-    <TextView
-        android:text="BathroomName"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/BathroomName"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_marginLeft="5dp" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.15"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="25dp">
-
-        <HorizontalScrollView
+        <TextView
+            android:text="BathroomName"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:id="@+id/h_scrollView">
+            android:layout_height="wrap_content"
+            android:id="@+id/BathroomName"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
 
-            <LinearLayout
-                android:orientation="horizontal"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BathroomName"
+            android:layout_alignParentStart="true"
+            android:id="@+id/linear_scroll"
+            android:layout_marginBottom = "25dp"
+            android:layout_marginTop = "25dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:id="@+id/h_scrollView">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@android:drawable/ic_menu_report_image"
+                        android:id="@+id/imageView4"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@android:drawable/ic_menu_report_image"
+                        android:id="@+id/imageView5"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@android:drawable/ic_menu_report_image"
+                        android:id="@+id/imageView3"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@android:drawable/ic_menu_report_image"
+                        android:id="@+id/imageView2"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:srcCompat="@android:drawable/ic_menu_report_image"
+                        android:id="@+id/imageView"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+        <TextView
+            android:text="Male or Female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/linear_scroll"/>
+
+        <TextView
+            android:text="Number of Stalls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/textView6"/>
+
+        <TextView
+            android:text="What floor it's on"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@id/textView7"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:text="Return to List"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:layout_height="wrap_content"
+                android:id="@+id/button7"
+                android:layout_weight="1"
+                android:onClick="listButtonOnClick"
+                android:backgroundTint="@android:color/white" />
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    android:id="@+id/imageView4"
-                    android:layout_weight="1" />
+            <Button
+                android:text="Map View"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button8"
+                android:layout_weight="1"
+                android:onClick="mapButtonOnClick"
+                android:backgroundTint="@android:color/white" />
+        </LinearLayout>
 
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    android:id="@+id/imageView5"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    android:id="@+id/imageView3"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    android:id="@+id/imageView2"
-                    android:layout_weight="1" />
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    android:id="@+id/imageView"
-                    android:layout_weight="1" />
-            </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
-
-    <TextView
-        android:text="Male or Female"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView6"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginLeft="5dp" />
-
-    <TextView
-        android:text="Number of Stalls"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView7"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginLeft="5dp" />
-
-    <TextView
-        android:text="What floor it's on"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginLeft="5dp" />
-
-    <TextView
-        android:text="Handicap Accessible"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView9"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_marginLeft="5dp" />
-
-    <RatingBar
-        android:layout_height="wrap_content"
-        android:id="@+id/ratingBar"
-        android:numStars="5"
-        android:rating="2"
-        android:stepSize="1"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="25dp"
-        android:layout_width="240dp" />
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp">
-
-        <Button
-            android:text="Return to List"
-            android:layout_width="wrap_content"
+        <TextView
+            android:text="Handicap Accessible"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button7"
-            android:layout_weight="1" />
+            android:id="@+id/textView9"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentEnd="true" />
 
-        <Button
-            android:text="Map View"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/button8"
-            android:layout_weight="1" />
-    </LinearLayout>
+            android:id="@+id/textView10"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/textView9"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
 </LinearLayout>

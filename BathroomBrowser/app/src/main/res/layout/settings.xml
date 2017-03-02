@@ -114,7 +114,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/button2"
             android:layout_weight="1"
-            android:onClick="mapButtonOnClick" />
+            android:onClick="mapButtonOnClick"
+            android:backgroundTint="@android:color/white" />
 
         <Button
             android:text="List View"
@@ -122,7 +123,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/button3"
             android:layout_weight="1"
-            android:onClick="listButtonOnClick" />
+            android:onClick="listButtonOnClick"
+            android:backgroundTint="@android:color/white" />
     </LinearLayout>
 
 </LinearLayout>

@@ -38,7 +38,7 @@ import java.util.List;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
     private GoogleMap mMap;
-    static public Location phone_location = null;
+    static public Location phone_location = SplashActivity.phone_location;
     List<Bathroom_Database_Entry> list = SplashActivity.list;
 
     @Override
@@ -94,21 +94,20 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // Getting Current Location
             Location location = locationManager.getLastKnownLocation(provider);
             phone_location = location;
-            //for testing with emulator
-            //phone_location.setLatitude(42.274752);
-            //phone_location.setLongitude(-71.808331);
+            phone_location = SplashActivity.phone_location;
 
             if (location != null) {
-                onLocationChanged(location);
+                onLocationChanged(phone_location);
+
             }
 
             android.location.LocationListener locationListener = new android.location.LocationListener() {
                 public void onLocationChanged(Location location) {
                     // Getting latitude of the current location
-                    double latitude = location.getLatitude();
+                    double latitude = phone_location.getLatitude();
 
                     // Getting longitude of the current location
-                    double longitude = location.getLongitude();
+                    double longitude = phone_location.getLongitude();
 
                     // Creating a LatLng object for the current location
                     LatLng latLng = new LatLng(latitude, longitude);

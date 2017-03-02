@@ -1,15 +1,19 @@
 package com.example.jake.bathroombrowser;
 
 import android.content.Context;
+import android.content.Intent;
 import android.location.Location;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
+
+import static java.security.AccessController.getContext;
 
 /**
  * Created by Jake on 2/28/2017.
@@ -61,15 +65,28 @@ public class Bathroom_List_Adapter extends BaseAdapter {
         //get reference to list item description view
         TextView description = (TextView) vi.findViewById(R.id.description);
 
+        ImageView thumbnail = (ImageView) vi.findViewById(R.id.thumbnail);
+        if(data.get(position).getName() == "Jeff"){
+            thumbnail.setImageResource(R.drawable.test);
+        }
+
         //create description
         String temp_desc ="";
         temp_desc += (data.get(position).getName());
-        temp_desc += ("\n Floor: ");
-        temp_desc += (String.valueOf(data.get(position).getEntranceFloor()));
-        temp_desc += ("\n Times Open: ");
+        temp_desc += ("\n");
+        int floor = data.get(position).getEntranceFloor();
+        if(floor == 1){
+            temp_desc += "On entrance floor.";
+        }
+        else{
+            temp_desc += "Not on entrance floor.";
+        }
+        temp_desc += ("\nTimes Open: ");
         temp_desc += (String.valueOf(data.get(position).getOpeningHour()));
         temp_desc += ("-");
         temp_desc += (String.valueOf(data.get(position).getClosingHour()));
+        temp_desc += ("\n");
+        temp_desc += (String.valueOf(data.get(position).getOtherData()));
 
         description.setText(temp_desc);
 
@@ -95,6 +112,22 @@ public class Bathroom_List_Adapter extends BaseAdapter {
         }
 
         distance.setText(String.valueOf((int)temp_dist));
+
+        final int posFinal = position;
+        vi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,BathroomActivity.class);
+                intent.putExtra("name", data.get(posFinal).getName());
+                intent.putExtra("gender", data.get(posFinal).getGender());
+                intent.putExtra("stalls",data.get(posFinal).getNumStalls());
+                intent.putExtra("floor", data.get(posFinal).getEntranceFloor());
+                intent.putExtra("handicap",data.get(posFinal).getHandicap());
+                intent.putExtra("urinals", data.get(posFinal).getNumUrinals());
+                intent.putExtra("other", data.get(posFinal).getOtherData());
+                context.startActivity(intent);
+            }
+        });
         return vi;
     }
 

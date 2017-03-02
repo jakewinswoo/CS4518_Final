@@ -1,0 +1,109 @@
+1	Alden Memorial Hall Basement	42.273351	-71.808305	Female	6	0	1	0	0	0	8	0	1	Open during public events
+2	Alden Memorial Hall Basement	42.273353	-71.808443	Male	3	4	1	0	0	0	8	0	0	Open during public events
+3	Alden Memorial Hall 1st Floor	42.272997	-71.808335	Neutral	1	0	0	0	0	0	8	0	0	Open during public events
+4	Alden Memorial Hall 1st Floor	42.273015	-71.808540	Neutral	1	0	0	0	0	0	8	0	0	Open during public events
+5	Atwater Kent Laboratories 1st Floor	42.275271	-71.807070	Female	4	0	1	1	0	0	8	17	1	ECE/RBE/ME WPI ID cards grant access after closing
+6	Atwater Kent Laboratories 1st Floor	42.275347	-71.806961	Male	2	2	1	1	0	0	8	17	0	ECE/RBE/ME WPI ID cards grant access after closing
+7	Atwater Kent Laboratories 2nd Floor	42.275271	-71.807070	Female	2	0	1	0	0	0	8	17	0	ECE/RBE/ME WPI ID cards grant access after closing
+8	Atwater Kent Laboratories 2nd Floor	42.275272	-71.806961	Male	2	2	1	0	0	0	8	17	0	ECE/RBE/ME WPI ID cards grant access after closing
+9	Atwater Kent Laboratories 3rd Floor	42.275490	-71.807066	Female	1	0	1	0	1	0	8	17	0	ECE/RBE/ME WPI ID cards grant access after closing
+10	Atwater Kent Laboratories 3rd Floor	42.275199	-71.806771	Male	1	1	1	0	0	0	8	17	0	ECE/RBE/ME WPI ID cards grant access after closing
+11	Bartlett Center 1st Floor	42.273607	-71.808860	Neutral	4	0	1	1	0	0	8	17	0	-
+12	Bartlett Center 2nd Floor	42.273607	-71.808860	Neutral	4	0	1	0	0	0	8	17	0	-
+13	Boynton Hall Basement	42.273508	-71.807561	Female	3	0	0	0	0	0	8	17	0	Has a common room
+14	Boynton Hall Basement	42.273484	-71.807424	Male	1	1	1	0	0	0	8	17	0	-
+15	Boynton Hall 1st Floor	42.273441	-71.807321	Neutral	1	0	1	1	0	0	8	17	0	-
+16	Boynton Hall 2nd Floor	42.273545	-71.807404	Female	3	0	1	0	1	0	8	17	0	One of the nicest bathrooms on campus
+17	Boynton Hall 3rd Floor	42.273514	-71.807378	Male	2	2	1	0	0	0	8	17	0	-
+18	Daniels Hall 1st Floor	42.273327	-71.810167	Female	1	0	0	1	0	0	8	17	1	After 5, you need a WPI ID to get in. After 8, you need a Daniels or Morgan Hall Dorm ID to get in.
+19	Daniels Hall 1st Floor	42.273327	-71.810111	Male	1	1	1	1	0	0	8	17	0	After 5, you need a WPI ID to get in. After 8, you need a Daniels or Morgan Hall Dorm ID to get in.
+20	Daniels Hall 1st Floor	42.273327	-71.810145	Neutral	1	0	1	1	0	0	8	17	0	After 5, you need a WPI ID to get in. After 8, you need a Daniels or Morgan Hall Dorm ID to get in.
+21	East Hall 1st Floor	42.273906	-71.805126	Female	3	0	1	1	0	0	8	17	0	After 5, you need an East Hall Dorm ID to get in.
+22	East Hall 1st Floor	42.273895	-71.805129	Male	1	0	1	1	0	0	8	17	0	After 5, you need an East Hall Dorm ID to get in.
+23	East Hall 1st Floor	42.274023	-71.805019	Neutral	1	0	1	1	0	0	8	17	0	After 5, you need an East Hall Dorm ID to get in.
+24	Founders Hall 1st Floor	42.273210	-71.804982	Female	2	0	1	1	0	0	0	23	0	Always Open
+25	Founders Hall 1st Floor	42.273210	-71.805061	Male	1	1	1	1	0	0	0	23	0	Always Open
+26	Founders Hall Basement	42.273268	-71.805064	Female	2	0	1	0	0	0	0	23	0	Always Open
+27	Founders Hall Basement	42.273268	-71.805064	Male	1	2	1	0	0	0	0	23	0	Always Open
+28	Fuller Laboratories Basement	42.274967	-71.806364	Female	2	0	1	1	0	0	8	17	0	Any WPI ID grants access after closing
+29	Fuller Laboratories Basement	42.274989	-71.806464	Male	1	2	1	1	0	0	8	17	0	Any WPI ID grants access after closing
+30	Fuller Laboratories 1st Floor	42.274960	-71.806398	Female	4	0	1	0	0	0	8	17	1	Any WPI ID grants access after closing
+31	Fuller Laboratories 1st Floor	42.275032	-71.806405	Male	3	4	1	0	0	0	8	17	0	Any WPI ID grants access after closing
+32	Gateway II 1st Floor	42.274495	-71.799000	Female	4	0	1	1	0	0	8	17	1	-
+33	Gateway II 1st Floor	42.274505	-71.798853	Male	2	2	1	1	0	0	8	17	0	-
+34	Gateway II 2nd Floor	42.274495	-71.799000	Female	4	0	1	0	0	0	8	17	1	-
+35	Gateway II 2nd Floor	42.274475	-71.798899	Male	2	2	1	0	0	0	8	17	0	-
+36	Gateway II 3rd Floor	42.274495	-71.799000	Female	4	0	1	0	0	0	8	17	1	-
+37	Gateway II 3rd Floor	42.274490	-71.798992	Male	2	2	1	0	0	0	8	17	0	-
+38	Gateway II 4th Floor	42.274495	-71.799000	Female	4	0	1	0	0	0	8	17	1	-
+39	Gateway II 4th Floor	42.274535	-71.799038	Male	2	2	1	0	0	0	8	17	0	-
+40	Gateway Park 1st Floor	42.275461	-71.799025	Female	5	0	1	1	0	0	8	17	0	-
+41	Gateway Park 1st Floor	42.275415	-71.799177	Male	2	2	1	1	0	0	8	17	0	-
+42	Gateway Park 2nd Floor	42.275461	-71.799025	Female	5	0	1	0	0	0	8	17	0	-
+43	Gateway Park 2nd Floor	42.275400	-71.799084	Male	2	2	1	0	0	0	8	17	0	-
+44	Gateway Park 3rd Floor	42.275461	-71.799025	Female	5	0	1	0	0	0	8	17	0	-
+45	Gateway Park 3rd Floor	42.275475	-71.799084	Male	2	2	1	0	0	0	8	17	0	-
+46	Gateway Park 4th Floor	42.275461	-71.799025	Female	5	0	1	0	0	0	8	17	0	-
+47	Gateway Park 4th Floor	42.275490	-71.799177	Male	2	2	1	0	0	0	8	17	0	-
+48	George C. Gordon Library 1st Floor	42.274362	-71.806260	Female	4	0	1	0	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+49	George C. Gordon Library 1st Floor	42.274355	-71.806260	Male	2	2	1	0	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+50	George C. Gordon Library 1st Floor	42.274380	-71.806387	Neutral	1	0	1	0	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+51	George C. Gordon Library 2nd Floor	42.274362	-71.806260	Female	4	0	1	1	0	0	0	20	1	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+52	George C. Gordon Library 2nd Floor	42.274355	-71.806260	Male	2	2	1	1	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+53	George C. Gordon Library 2nd Floor	42.274380	-71.806387	Neutral	1	0	1	1	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+54	George C. Gordon Library 3rd Floor	42.274362	-71.806260	Female	4	0	1	0	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+55	George C. Gordon Library 3rd Floor	42.274355	-71.806260	Male	2	2	1	0	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+56	George C. Gordon Library 3rd Floor	42.274380	-71.806387	Neutral	1	0	1	0	0	0	0	20	0	WPI ID required after 8pm, no entry after 1am. See Library Website for detailed hours
+57	Goddard Hall Ground Floor	42.275988	-71.807901	Female	3	0	1	1	0	0	8	17	1	Chem/Bio WPI ID grants entry after closing
+58	Goddard Hall 1st Floor	42.275707	-71.807795	Neutral	1	0	1	1	0	0	8	17	0	Chem/Bio WPI ID grants entry after closing
+59	Goddard Hall 1st Floor	42.275702	-71.807795	Neutral	1	0	1	1	0	0	8	17	0	Chem/Bio WPI ID grants entry after closing
+60	Goddard Hall 1st Floor	42.275662	-71.807748	Male	3	2	1	1	0	0	8	17	0	Chem/Bio WPI ID grants entry after closing
+61	Goddard Hall 2nd Floor	42.275988	-71.807901	Female	3	0	1	0	0	0	8	17	0	Chem/Bio WPI ID grants entry after closing
+62	Goddard Hall 3rd Floor	42.275763	-71.807848	Male	4	2	1	0	0	0	8	17	0	Chem/Bio WPI ID grants entry after closing
+63	Higgins Laboratories Ground Floor	42.274287	-71.808218	Female	3	0	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+64	Higgins Laboratories Ground Floor	42.274232	-71.808350	Male	2	1	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+65	Higgins Laboratories 1st Floor	42.274287	-71.808218	Female	3	0	1	0	0	0	8	17	1	Any WPI ID grants entry after closing
+66	Higgins Laboratories 1st Floor	42.274232	-71.808350	Male	2	1	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+67	Higgins Laboratories 2nd Floor	42.274287	-71.808218	Female	3	0	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+68	Higgins Laboratories 2nd Floor	42.274232	-71.808119	Male	2	1	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+69	Higgins Laboratories 3rd Floor	42.274287	-71.808218	Female	2	0	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+70	Higgins Laboratories 3rd Floor	42.274009	-71.808350	Male	1	1	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+71	Kaven Hall Ground Floor	42.274835	-71.805735	Female	1	0	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+72	Kaven Hall Ground Floor	42.274800	-71.805710	Male	1	1	1	0	0	0	8	17	0	Any WPI ID grants entry after closing
+73	Kaven Hall 1st Floor	42.275066	-71.805895	Female	1	0	0	1	0	0	8	17	1	Any WPI ID grants entry after closing
+74	Kaven Hall 1st Floor	42.275054	-71.805794	Male	2	1	0	1	0	0	8	17	0	Any WPI ID grants entry after closing
+75	Kaven Hall 2nd Floor	42.274866	-71.805755	Female	3	0	1	0	0	0	8	17	1	Any WPI ID grants entry after closing
+76	Kaven Hall 2nd Floor	42.274882	-71.805774	Male	1	2	0	0	0	0	8	17	0	Any WPI ID grants entry after closing
+77	Morgan Hall 1st Floor	42.273337	-71.810574	Female	3	0	1	1	0	0	8	17	0	After 5, you need a WPI ID to get in. After 8, you need a Daniels or Morgan Hall Dorm ID to get in.
+78	Morgan Hall 1st Floor	42.273329	-71.810574	Male	1	2	1	1	0	0	8	17	0	After 5, you need a WPI ID to get in. After 8, you need a Daniels or Morgan Hall Dorm ID to get in.
+79	Olin Hall Ground Floor	42.275126	-71.807887	Male	2	2	0	1	0	0	8	17	0	No Entry after closing, closed on weekends
+80	Olin Hall 1st Floor	42.274958	-71.808020	Female	5	0	0	0	0	0	8	17	1	No Entry after closing, closed on weekends
+81	Olin Hall 1st Floor	42.274958	-71.808015	Neutral	1	0	1	0	0	0	8	17	0	No Entry after closing, closed on weekends
+82	Olin Hall 2nd Floor	42.275066	-71.807980	Male	2	4	0	0	0	0	8	17	0	No Entry after closing, closed on weekends
+83	Riley Commons	42.273248	-71.809197	Female	4	0	0	0	0	0	0	0	0	WPI ID required for entry
+84	Riley Commons	42.273162	-71.808933	Male	2	2	0	0	0	0	0	0	0	WPI ID required for entry
+85	Riley Commons	42.273121	-71.809071	Neutral	1	0	1	1	0	0	0	0	0	WPI ID required for entry
+86	Rubin Campus Center 1st Floor	42.274680	-71.808512	Female	4	0	1	1	0	0	8	22	1	-
+87	Rubin Campus Center 1st Floor	42.274725	-71.808628	Male	2	2	1	1	0	0	8	22	0	-
+88	Rubin Campus Center 2nd Floor	42.274680	-71.808512	Female	4	0	1	1	0	0	8	22	1	-
+89	Rubin Campus Center 2nd Floor	42.274725	-71.808628	Male	2	2	1	1	0	0	8	22	0	-
+90	Rubin Campus Center 3rd Floor	42.274680	-71.808512	Female	7	0	1	0	1	0	8	22	1	-
+91	Rubin Campus Center 3rd Floor	42.274725	-71.808628	Male	2	2	1	0	0	0	8	22	0	-
+92	Salisbury Laboratories 1st Floor	42.274538	-71.807260	Female	2	0	1	1	0	0	8	17	1	WPI ID required for entry after closing
+93	Salisbury Laboratories 1st Floor	42.274543	-71.806961	Male	3	4	1	1	0	0	8	17	0	WPI ID required for entry after closing
+94	Salisbury Laboratories 2nd Floor	42.274557	-71.807146	Male	3	3	1	0	0	0	8	17	0	WPI ID required for entry after closing
+95	Salisbury Laboratories 3rd Floor	42.274838	-71.806895	Female	3	0	1	0	1	0	8	17	1	WPI ID required for entry after closing
+96	Salisbury Laboratories 4th Floor	42.274601	-71.806960	Male	2	2	1	0	0	0	8	17	0	WPI ID required for entry after closing
+97	Sports and Recreation Center 2nd Floor	42.274440	-71.810418	Female	5	0	1	0	0	0	8	23	0	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+98	Sports and Recreation Center 2nd Floor	42.274510	-71.810458	Male	3	2	1	0	0	0	8	23	0	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+99	Sports and Recreation Center 3rd Floor	42.274440	-71.810418	Female	5	0	1	1	0	0	8	23	1	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+100	Sports and Recreation Center 3rd Floor	42.274510	-71.810458	Male	3	2	1	1	0	0	8	23	0	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+101	Sports and Recreation Center 3rd Floor	42.273938	-71.810680	Neutral	1	0	1	1	1	0	8	23	0	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+102	Sports and Recreation Center 4th Floor	42.274440	-71.810418	Female	5	0	1	0	0	0	8	23	1	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+103	Sports and Recreation Center 4th Floor	42.274510	-71.810458	Male	3	2	1	0	0	0	8	23	0	Unless there is an ongoing public event, a WPI ID is required to enter the gym
+104	Stratton Hall Ground Floor	42.273922	-71.807650	Female	1	0	1	1	0	0	8	17	0	WPI ID required for entry after closing
+105	Stratton Hall Ground Floor	42.273845	-71.807645	Male	1	1	1	1	0	0	8	17	0	WPI ID required for entry after closing
+106	Stratton Hall 1st Floor	42.273817	-71.807678	Female	2	0	1	0	0	0	8	17	1	WPI ID required for entry after closing
+107	Stratton Hall 2nd Floor	42.273932	-71.807656	Male	1	4	0	0	0	0	8	17	0	WPI ID required for entry after closing
+108	Stratton Hall 3rd Floor	42.273971	-71.807648	Female	1	0	1	0	0	0	8	17	0	WPI ID required for entry after closing
+109	Stratton Hall 3rd Floor	42.273887	-71.807609	Male	1	4	0	0	0	0	8	17	0	WPI ID required for entry after closing

@@ -7,14 +7,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import static com.example.jake.bathroombrowser.R.id.thumbnail;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link Bathroom_List_Fragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Bathroom_List_Fragment extends Fragment {
+public class Bathroom_List_Fragment extends Fragment{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,30 +62,7 @@ public class Bathroom_List_Fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
        View view = inflater.inflate(R.layout.bathroom_list_fragment, container, false);
-
-        //set bathroom description, mParam1 will be bathroom description drawn from database
-        // *Name, floor, building, other info
-        TextView descriptor = (TextView)view.findViewById(R.id.description);
-        descriptor.setText(mParam1);
-
-        //set bathroom distance from user
-        //calculate elsewhere with gps coords and pass to fragment constructor as param2, as a string
-        TextView distance = (TextView)view.findViewById(R.id.distance);
-        distance.setText(mParam2);
-
-        //add onclick to open bathroom screen
-        View image = view.findViewById(R.id.thumbnail);
-        image.setOnClickListener(
-                new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        startActivity(new Intent(getContext(),BathroomActivity.class));
-                    }
-                }
-        );
         return view;
     }
-
-
 
 }

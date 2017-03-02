@@ -27,8 +27,8 @@ public class Bathroom_Database_Entry {
     }
     public Bathroom_Database_Entry(int id,
                                    String name,
-                                   double GPSLong,
                                    double GPSLat,
+                                   double GPSLong,
                                    String gender,
                                    int numStalls,
                                    int numUrinals,
@@ -67,7 +67,7 @@ public class Bathroom_Database_Entry {
         this.GPSLong = gpsLong;
     }
     public void setGPSLat (double gpsLat){
-        this.GPSLat = GPSLat;
+        this.GPSLat = gpsLat;
     }
     public void setGender (String gender){
         this.gender = gender;
