@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import static com.example.jake.bathroombrowser.R.id.BathroomName;
+import static com.example.jake.bathroombrowser.R.mipmap.ic_launcher;
 
 public class BathroomActivity extends AppCompatActivity {
     String name = "name";
@@ -38,6 +40,19 @@ public class BathroomActivity extends AppCompatActivity {
         bname.setText(name);
         TextView bgender = (TextView) findViewById(R.id.textView6);
         bgender.setText(gender);
+        ImageView imageview = (ImageView) findViewById((R.id.imageView));
+        if(gender.toLowerCase().equals("male")){
+            imageview.setImageResource(R.drawable.male);
+        }
+        else if(gender.toLowerCase().equals("female")){
+            imageview.setImageResource((R.drawable.female));
+        }
+        else{
+            imageview.setImageResource(ic_launcher);
+        }
+        if(name.equals("Jeff")){
+            imageview.setImageResource(R.drawable.test);
+        }
         TextView bstalls = (TextView) findViewById(R.id.textView7);
         bstalls.setText("Stalls: " + stalls + " Urinals: " + urinals);
         TextView bfloor = (TextView) findViewById(R.id.textView8);

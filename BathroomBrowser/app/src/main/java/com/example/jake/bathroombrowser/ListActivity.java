@@ -55,8 +55,15 @@ public class ListActivity extends AppCompatActivity {
             }
         });
 
+        int listcap=200;
+        if(getFromSP("cb6")){
+            listcap = 10;
+        }
+        else{
+            listcap = 200;
+        }
         //only display nearest 10 bathrooms
-        List<Bathroom_Database_Entry> sublist = displayList.subList(0, min(displayList.size(), 10));
+        List<Bathroom_Database_Entry> sublist = displayList.subList(0, min(displayList.size(), listcap));
 
         adapter = new Bathroom_List_Adapter(this, sublist);
 
@@ -119,9 +126,23 @@ public class ListActivity extends AppCompatActivity {
                     continue;
                 }
             }
-            if(!getFromSP(list.get(i).getGender().toLowerCase())){
-                add = false;
-                continue;
+            if(getFromSP("male")){
+                if(list.get(i).getGender().toLowerCase().equals("female")){
+                    add = false;
+                    continue;
+                }
+            }
+            if(getFromSP("female")){
+                if(list.get(i).getGender().toLowerCase().equals("male")){
+                    add = false;
+                    continue;
+                }
+            }
+            if(getFromSP("neutral")){
+                if(!(list.get(i).getGender().toLowerCase().equals("neutral"))){
+                    add = false;
+                    continue;
+                }
             }
 
             if(add){

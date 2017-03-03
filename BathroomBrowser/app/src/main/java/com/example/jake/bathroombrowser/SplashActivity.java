@@ -36,8 +36,8 @@ public class SplashActivity extends AppCompatActivity {
         //phone_location.setLongitude(-71.808331);
         readFile();
 
-        list = list.subList(0, min(list.size(),110));
-        System.out.println(list.size());
+        //list = list.subList(0, min(list.size(),110));
+        //System.out.println(list.size());
 
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -75,6 +75,7 @@ public class SplashActivity extends AppCompatActivity {
         DBHandler bathroomDatabase = new DBHandler(mContext);
         if (is != null) {
             try {
+                bathroomDatabase.dropTable();
                 while ((data = reader.readLine()) != null) {
                     String[] line = data.split("\t");
                     Bathroom_Database_Entry newBathroom = new Bathroom_Database_Entry(

@@ -52,6 +52,15 @@
             android:layout_weight="1"
             android:textColor="@android:color/white"
             android:layout_marginLeft="15dp" />
+
+        <RadioButton
+            android:text="All"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton5"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:layout_marginLeft="15dp" />
     </RadioGroup>
 
     <TextView
@@ -102,11 +111,19 @@
         android:layout_marginLeft="15dp"
         android:textColor="@android:color/white" />
 
+    <CheckBox
+        android:text="Display only 10 results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBox6"
+        android:layout_marginLeft="15dp"
+        android:textColor="@android:color/white" />
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="120dp">
+        android:layout_marginTop="50dp">
 
         <Button
             android:text="Map View"

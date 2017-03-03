@@ -1,8 +1,14 @@
 package com.example.jake.bathroombrowser;
 
+import android.*;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Criteria;
 import android.location.Location;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +19,10 @@ import android.widget.Toast;
 
 import java.util.List;
 
+import static android.R.color.holo_blue_dark;
+import static android.R.color.holo_purple;
+import static android.content.Context.LOCATION_SERVICE;
+import static com.example.jake.bathroombrowser.R.mipmap.ic_launcher;
 import static java.security.AccessController.getContext;
 
 /**
@@ -66,7 +76,17 @@ public class Bathroom_List_Adapter extends BaseAdapter {
         TextView description = (TextView) vi.findViewById(R.id.description);
 
         ImageView thumbnail = (ImageView) vi.findViewById(R.id.thumbnail);
-        if(data.get(position).getName() == "Jeff"){
+
+        if(data.get(position).getGender().toLowerCase().equals("neutral")){
+            thumbnail.setImageResource(ic_launcher);
+        }
+        if(data.get(position).getGender().toLowerCase().equals("female")){
+            thumbnail.setImageResource(R.drawable.female);
+        }
+        if(data.get(position).getGender().toLowerCase().equals("male")){
+            thumbnail.setImageResource(R.drawable.male);
+        }
+        if(data.get(position).getName().equals("Jeff")){
             thumbnail.setImageResource(R.drawable.test);
         }
 
@@ -107,8 +127,23 @@ public class Bathroom_List_Adapter extends BaseAdapter {
             temp_dist = haversine(phone_lat, phone_long, data.get(position).getGPSLat(), data.get(position).getGPSLong());
         }
         else{
-            Toast.makeText(context, "Please go to Map First",
-                    Toast.LENGTH_LONG).show();
+            if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                    != PackageManager.PERMISSION_GRANTED) {
+
+            }
+            LocationManager locationManager = (LocationManager) context.getSystemService(LOCATION_SERVICE);
+
+            // Creating a criteria object to retrieve provider
+            Criteria criteria = new Criteria();
+            // Getting the name of the best provider
+            String provider = locationManager.getBestProvider(criteria, true);
+
+            // Getting Current Location
+            phone_location = locationManager.getLastKnownLocation(provider);
+            double phone_lat = phone_location.getLatitude();
+            double phone_long = phone_location.getLongitude();
+
+            temp_dist = haversine(phone_lat, phone_long, data.get(position).getGPSLat(), data.get(position).getGPSLong());
         }
 
         distance.setText(String.valueOf((int)temp_dist));

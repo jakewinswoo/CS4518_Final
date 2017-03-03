@@ -4,11 +4,13 @@ import android.*;
 import android.Manifest;
 import android.app.Dialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -33,7 +35,11 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+
+import static java.lang.Math.min;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback{
 
@@ -157,8 +163,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
     }
 
-    public void drawBathrooms(GoogleMap googleMap, List<Bathroom_Database_Entry> bathrooms){
+    public void drawBathrooms(GoogleMap googleMap, List<Bathroom_Database_Entry> input){
         mMap = googleMap;
+
+        List<Bathroom_Database_Entry> bathrooms = filterList(input);
 
         int b_size = bathrooms.size();
 
@@ -166,8 +174,88 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             double latitude = bathrooms.get(i).getGPSLat();
             double longitude = bathrooms.get(i).getGPSLong();
             LatLng latLng = new LatLng(latitude, longitude);
-            mMap.addMarker(new MarkerOptions().position(latLng).title(bathrooms.get(i).getName()));
+            mMap.addMarker(new MarkerOptions().position(latLng).title(bathrooms.get(i).getName() + " (" + bathrooms.get(i).getGender() + ")"));
         }
+    }
+
+    public List<Bathroom_Database_Entry> filterList(List<Bathroom_Database_Entry> startlist){
+        int size = startlist.size();
+        List<Bathroom_Database_Entry> newlist = new ArrayList<>();
+
+        boolean handi, change, hy, card, open;
+        handi = getFromSP("cb1");
+        change = getFromSP("cb2");
+        hy = getFromSP("cb3");
+        card = getFromSP("cb4");
+        open = getFromSP("cb5");
+
+        Calendar c = Calendar.getInstance();
+        int hour = c.get(Calendar.HOUR_OF_DAY);
+
+        for(int i=0;i<size;i++){
+            boolean add = true;
+            if(handi){
+                if(!(list.get(i).getHandicap() == 1)){
+                    add = false;
+                    continue;
+                }
+            }
+            if(change){
+                if(!(list.get(i).getChangingTable() == 1)){
+                    add = false;
+                    continue;
+                }
+            }
+            if(hy){
+                if(!(list.get(i).getFemHygiene() == 1)){
+                    add = false;
+                    continue;
+                }
+            }
+            if(card){
+                if(!(list.get(i).getEntranceFloor() == 1)){
+                    add = false;
+                    continue;
+                }
+            }
+            if(open){
+                if(!((list.get(i).getOpeningHour() < hour) && (hour < list.get(i).getClosingHour()))){
+                    add = false;
+                    continue;
+                }
+            }
+            if(getFromSP("male")){
+                if(list.get(i).getGender().toLowerCase().equals("female")){
+                    add = false;
+                    continue;
+                }
+            }
+            if(getFromSP("female")){
+                if(list.get(i).getGender().toLowerCase().equals("male")){
+                    add = false;
+                    continue;
+                }
+            }
+            if(getFromSP("neutral")){
+                if(!(list.get(i).getGender().toLowerCase().equals("neutral"))){
+                    add = false;
+                    continue;
+                }
+            }
+
+
+            if(add){
+                newlist.add(list.get(i));
+            }
+        }
+        //System.out.println(newlist.size());
+        //System.out.println(startlist.size());
+        return newlist;
+    }
+
+    private boolean getFromSP(String key){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        return preferences.getBoolean(key, false);
     }
 
 }

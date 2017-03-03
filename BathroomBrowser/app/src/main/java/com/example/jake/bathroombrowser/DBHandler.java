@@ -73,6 +73,12 @@ public class DBHandler extends SQLiteOpenHelper{
         onCreate(db);
     }
 
+    public void dropTable(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BATHROOMS);
+        onCreate(db);
+    }
+
     public void addBathroom(Bathroom_Database_Entry bathroom){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();

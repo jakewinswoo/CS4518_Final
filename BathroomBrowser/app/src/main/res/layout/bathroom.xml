@@ -20,63 +20,19 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@android:drawable/ic_menu_report_image"
+            android:id="@+id/imageView"
+            android:layout_weight="1"
             android:layout_below="@+id/BathroomName"
-            android:layout_alignParentStart="true"
-            android:id="@+id/linear_scroll"
-            android:layout_marginBottom = "25dp"
-            android:layout_marginTop = "25dp">
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop = "15dp"
+            android:layout_marginBottom = "15dp"/>
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:id="@+id/h_scrollView">
-
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@android:drawable/ic_menu_report_image"
-                        android:id="@+id/imageView4"
-                        android:layout_weight="1" />
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@android:drawable/ic_menu_report_image"
-                        android:id="@+id/imageView5"
-                        android:layout_weight="1" />
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@android:drawable/ic_menu_report_image"
-                        android:id="@+id/imageView3"
-                        android:layout_weight="1" />
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@android:drawable/ic_menu_report_image"
-                        android:id="@+id/imageView2"
-                        android:layout_weight="1" />
-
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        app:srcCompat="@android:drawable/ic_menu_report_image"
-                        android:id="@+id/imageView"
-                        android:layout_weight="1" />
-                </LinearLayout>
-            </HorizontalScrollView>
-        </LinearLayout>
         <TextView
             android:text="Male or Female"
             android:layout_width="match_parent"
@@ -84,7 +40,7 @@
             android:id="@+id/textView6"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:layout_marginLeft="5dp"
-            android:layout_below="@id/linear_scroll"/>
+            android:layout_below="@id/imageView"/>
 
         <TextView
             android:text="Number of Stalls"

@@ -19,7 +19,7 @@ public class SettingsActivity extends AppCompatActivity implements CompoundButto
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
 
-        CheckBox cb1,cb2,cb3,cb4,cb5;
+        CheckBox cb1,cb2,cb3,cb4,cb5,cb6;
         RadioButton male, neutral, female;
 
         cb1 = (CheckBox)findViewById(R.id.checkBox);
@@ -37,6 +37,9 @@ public class SettingsActivity extends AppCompatActivity implements CompoundButto
         cb5 = (CheckBox)findViewById(R.id.checkBox5);
         cb5.setChecked(getFromSP("cb5"));
         cb5.setOnCheckedChangeListener(this);
+        cb6 = (CheckBox)findViewById(R.id.checkBox6);
+        cb6.setChecked(getFromSP("cb6"));
+        cb6.setOnCheckedChangeListener(this);
         male = (RadioButton) findViewById(R.id.radioButton2);
         male.setChecked(getFromSP("male"));
         male.setOnCheckedChangeListener(this);
@@ -88,6 +91,9 @@ public class SettingsActivity extends AppCompatActivity implements CompoundButto
                 break;
             case R.id.checkBox5:
                 saveInSp("cb5",isChecked);
+                break;
+            case R.id.checkBox6:
+                saveInSp("cb6",isChecked);
                 break;
             case R.id.radioButton2:
                 saveInSp("male",isChecked);
