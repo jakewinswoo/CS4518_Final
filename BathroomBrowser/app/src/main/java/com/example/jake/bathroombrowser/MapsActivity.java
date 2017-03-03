@@ -94,7 +94,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             // Getting Current Location
             Location location = locationManager.getLastKnownLocation(provider);
             phone_location = location;
-            phone_location = SplashActivity.phone_location;
+            //phone_location = SplashActivity.phone_location;
 
             if (location != null) {
                 onLocationChanged(phone_location);

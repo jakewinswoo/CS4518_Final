@@ -2,6 +2,7 @@ package com.example.jake.bathroombrowser;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -58,13 +59,13 @@ public class SettingsActivity extends AppCompatActivity implements CompoundButto
         startActivity(new Intent(getApplicationContext(),ListActivity.class));
     }
 
-    private boolean getFromSP(String key){
-        SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+    public boolean getFromSP(String key){
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         return preferences.getBoolean(key, false);
     }
 
     private void saveInSp(String key,boolean value){
-        SharedPreferences preferences = getApplicationContext().getSharedPreferences("PROJECT_NAME", android.content.Context.MODE_PRIVATE);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(key, value);
         editor.commit();

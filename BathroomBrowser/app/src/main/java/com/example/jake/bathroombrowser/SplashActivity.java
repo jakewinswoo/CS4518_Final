@@ -1,8 +1,12 @@
 package com.example.jake.bathroombrowser;
 
+import android.*;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.location.Location;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,21 +19,34 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.Math.min;
+
 public class SplashActivity extends AppCompatActivity {
 
     static public List<Bathroom_Database_Entry> list = Arrays.asList();
     //static public List<Bathroom_Database_Entry> list = Arrays.asList(new Bathroom_Database_Entry(0, "Test",-71.808331,42.274752,"Neutral",0,0,0,1,0,0,5,23,0,""),new Bathroom_Database_Entry(0, "Jeff",-71.820385,42.264675,"Male",1,1,0,3,1,1,7,22,0,"There is a lofted urinal above the stall. You must climb a rolling ladder to use."));
     static public Location phone_location = new Location("");
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen);
-        phone_location.setLatitude(42.274752);
-        phone_location.setLongitude(-71.808331);
+        //phone_location.setLatitude(42.274752);
+        //phone_location.setLongitude(-71.808331);
         readFile();
+
+        list = list.subList(0, min(list.size(),110));
+        System.out.println(list.size());
+
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{
+                            android.Manifest.permission.ACCESS_FINE_LOCATION,
+                            android.Manifest.permission.ACCESS_COARSE_LOCATION},
+                    1337);
+            return;
+        }
     }
 
     public void mapButtonOnClick(View v){
@@ -78,8 +95,6 @@ public class SplashActivity extends AppCompatActivity {
                             line[14]);
                     //Log.v("ID " + line[0], "Lat: " + line[2]);
                     //Log.v("ID " + line[0], "Lon: " + line[3]);
-
-
                     bathroomDatabase.addBathroom(newBathroom);
                 }
                 is.close();

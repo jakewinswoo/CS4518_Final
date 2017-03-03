@@ -45,6 +45,7 @@ public class DBHandler extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_BATHROOMS);
         String CREATE_BATHROOMS_TABLE = "CREATE TABLE " + TABLE_BATHROOMS + "(" +
                 KEY_ID + " INTEGER PRIMARY KEY, " +
                 KEY_NAME + " TEXT, " +
